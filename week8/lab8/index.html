@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+        <link href="styles.css" rel="stylesheet">
+        <title>Trivia!</title>
+
+        <script>
+
+            // TODO: Add code to check answers to questions
+            window.addEventListener("load", function(){
+
+                // Multiple Choice answer check
+                const multipleChoice = document.querySelectorAll('button');
+
+                multipleChoice.forEach(button => {
+                    button.addEventListener('click', function(){
+
+                        let answer = document.getElementById('mc_answer');
+
+                        let current = document.getElementsByClassName('active');
+
+                        if (current[0])
+                        {
+                            current[0].style.backgroundColor = "#d9edff";
+                            current[0].style.color = "black";
+                            current[0].style.transform = "scale(1)";
+                            current[0].className = current[0].className.replace("active", "");
+                        }
+
+                        this.className += "active";
+
+                        if (button.className == "active")
+                        {
+                            this.style.transform = "scale(1.05)";
+
+                            if (this.id == "true")
+                            {
+                                this.style.backgroundColor = "green";
+                                this.style.color = "white";
+                                answer.textContent = "Correct!";
+                            }
+                            else
+                            {
+                                this.style.backgroundColor = "red";
+                                this.style.color = "white";
+                                answer.textContent = "Incorrect";
+
+                            }
+                        }
+                    })
+                })
+
+                // Free response answer checker
+                document.getElementById('submit').addEventListener('click', function(){
+
+                    let answer = document.getElementById('fr_answer');
+
+                    if (document.getElementById('textbox').value == "Surrey")
+                    {
+                        answer.textContent = 'Correct!'
+                    }
+                    else
+                    {
+                        answer.textContent = 'False!'
+                    }
+                })
+            })
+
+        </script>
+
+    </head>
+    <body>
+
+        <div class="jumbotron">
+            <h1>Trivia!</h1>
+        </div>
+
+        <div class="container">
+
+            <div class="section">
+                <h2>Part 1: Multiple Choice </h2>
+                <hr>
+
+                <!-- TODO: Add multiple choice question here -->
+                <h3>Which prime minister in Canada believed the spirit of his mother lived in his dog?</h3>
+
+                <button>John A. MacDonald</button>
+                <button>Pierre Elliot Trudeau</button>
+                <button>Jean Cretien</button>
+                <button id='true'>William Lyon Mackenzie King Jr.</button>
+                <button>Stephen Harper</button>
+
+                <h4 id="mc_answer"></h4>
+            </div>
+
+            <div class="section">
+                <h2>Part 2: Free Response</h2>
+                <hr>
+
+                <!-- TODO: Add free response question here -->
+                <h3>Which city in Canada has the highest crime rate per capita?</h3>
+                <input type="text" id="textbox">
+                <input type="submit" id="submit" value="Check Answer">
+
+                <h4 id="fr_answer"></h4>
+            </div>
+
+        </div>
+    </body>
+</html>

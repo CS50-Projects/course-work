@@ -1,0 +1,130 @@
+body {
+    font-family: 'Lato', sans-serif;
+    overflow: hidden;
+    padding: 0;
+    margin: 0;
+    user-select: none;
+}
+
+/* Nav bar */
+
+nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
+    text-transform: uppercase;
+    font-weight: 300;
+    height: 10vh;
+}
+
+nav a {
+    padding: 0 20px 0 20px;
+    text-decoration: none;
+    color: black;
+    text-align: center;
+    font-weight: 400;
+}
+
+nav a:hover {
+    transition: .5s;
+    text-decoration: none;
+    font-size: 20px;
+    color: black;
+}
+
+/* Main page */
+
+.left-side, .right-side {
+    width: 50%;
+    height: 100vh;
+    position: relative;
+}
+
+.left-side {
+    float: left;
+}
+
+.right-side {
+    background-color: black;
+    float: right;
+}
+
+.right-side:hover {
+    transition: 2s;
+    transform: translateX(-100%);
+}
+
+.left-side-text {
+    font-weight: 900;
+    font-style: italic;
+    font-size: 6vw;
+    line-height: 90%;
+    position: absolute;
+    bottom: 0;
+    margin-bottom: 200px;
+    padding: 50px;
+}
+
+.right-side-text {
+    position: absolute;
+    color: black;
+    font-size: 6vw;
+    font-weight: 900;
+    font-style: italic;
+    line-height: 90%;
+    margin-bottom: 150px;
+    padding: 50px;
+    bottom: 0;
+}
+
+/* Mission */
+
+.mission {
+    background-color: black;
+    position: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 100vh;
+    color: white;
+}
+
+.mission h1 {
+    font-style: italic;
+    padding-top: 10%;
+    font-weight: 900;
+    font-size: 8vw;
+}
+
+.mission p {
+    padding: 0 10% 0 10%;
+}
+
+/* Contact */
+
+form {
+    padding: 100px;
+}
+
+.btn {
+    width: 20vw;
+    float: right;
+}
+
+/* Gallery */
+
+.carousel_backgound {
+    background-color: black;
+    width: 80vw;
+    height: 80vh;
+}
+
+.carousel-item {
+    height: 90vh;
+  }
+
+.carousel-control-next,
+.carousel-control-prev {
+    filter: invert(100%);
+}
