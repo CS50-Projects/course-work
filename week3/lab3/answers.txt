@@ -1,0 +1,11 @@
+sort1 uses: Bubble sort
+
+How do you know?: It sorted through the sorted list about 10x faster than the reversed file of the same size.
+
+sort2 uses: Merge sort
+
+How do you know?: It sorted random 50000 more than twice as fast as the next fastest algorithm.
+
+sort3 uses: Selection sort
+
+How do you know?: It's time to process the reversed and sorted text files were nearly the same.
